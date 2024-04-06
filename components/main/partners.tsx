@@ -7,7 +7,7 @@ const Partners = () => {
       <div className="space-y-14">
         <h1 className="text-6xl font-custom mx-auto w-max">Our Partners</h1>
 
-        <div className="pt-5 px-10 flex flex-row justify-between">
+        <div className="pt-5 px-10 flex flex-col md:flex-row md:justify-between justify-center items-center md:items-stretch gap-4">
           <Image
             src={"/images/partners5.png"}
             height={200}

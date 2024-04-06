@@ -24,7 +24,7 @@ const Hero = () => {
           >
             Making Deep-Tech/ Hard-Tech Accessible to all
           </span>
-          <div className="text-4xl font-custom text-center w-max lg:min-w-lg text-violet-400">
+          <div className="text-xl md:text-4xl font-custom text-center w-max text-violet-400">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="mx-auto mt-20">
             <Button
               variant={"ghost"}
-              className="border-t-0 rounded-2xl rounded-t-none max-w-lg w-[516px] bg-transparent hover:bg-transparent hover:text-white text-3xl font-custom transition-all duration-300 transform hover:scale-110"
+              className="border-t-0 rounded-2xl rounded-t-none max-w-lg md:w-[516px] bg-transparent hover:bg-transparent hover:text-white text-3xl font-custom transition-all duration-300 transform hover:scale-110"
               style={{
                 boxShadow: "0 4px 4px rgba(178,131,255,.8)",
               }}

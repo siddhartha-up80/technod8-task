@@ -4,9 +4,9 @@ import { Card, CardContent } from "../ui/card";
 const Introcards = () => {
   return (
     <section className="">
-      <div className="flex gap-12 px-10 w-full">
+      <div className="flex gap-12 px-10 w-full md:flex-row flex-col mx-auto w-full">
         <Card
-          className="py-10 px-5 max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110"
+          className="py-10 px-5 md:max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110"
           style={{
             boxShadow: "0 4px 10px 5px rgba(178,131,255,.5)",
           }}
@@ -19,7 +19,7 @@ const Introcards = () => {
           </CardContent>
         </Card>{" "}
         <Card
-          className="py-14 px-2 max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110"
+          className="py-14 px-2 md:max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110"
           style={{
             boxShadow: "0 4px 10px 5px rgba(178,131,255,.5)",
           }}
@@ -34,7 +34,7 @@ const Introcards = () => {
           </CardContent>
         </Card>{" "}
         <Card
-          className="py-10 px-5 max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110"
+          className="py-10 px-5 md:max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110"
           style={{
             boxShadow: "0 4px 10px 5px rgba(178,131,255,.5)",
           }}
