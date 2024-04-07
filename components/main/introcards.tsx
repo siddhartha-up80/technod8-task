@@ -1,12 +1,38 @@
+"use client";
+
 import React from "react";
 import { Card, CardContent } from "../ui/card";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Introcards = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.5, 
+  });
+
+
+  const controls = useAnimation();
+
+
+  if (inView) {
+    controls.start({
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5 },
+    });
+  }
+
   return (
-    <section className="">
-      <div className="flex gap-12 px-10 w-full md:flex-row flex-col mx-auto w-full">
+    <motion.div
+      className="font-custom"
+      style={{ opacity: 0, scale: 0.5 }}
+      animate={controls}
+      ref={ref}
+    >
+      <div className="flex gap-12 px-10 w-full md:flex-row flex-col mx-auto">
         <Card
-          className="py-10 px-5 md:max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110"
+          className="py-10 px-5 md:max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110 hover:bg-white hover:text-black hover:shadow-2xl hover:shadow-purple-500"
           style={{
             boxShadow: "0 4px 10px 5px rgba(178,131,255,.5)",
           }}
@@ -19,7 +45,7 @@ const Introcards = () => {
           </CardContent>
         </Card>{" "}
         <Card
-          className="py-14 px-2 md:max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110"
+          className="py-14 px-2 md:max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110 hover:bg-white hover:text-black hover:shadow-2xl hover:shadow-purple-500"
           style={{
             boxShadow: "0 4px 10px 5px rgba(178,131,255,.5)",
           }}
@@ -34,7 +60,7 @@ const Introcards = () => {
           </CardContent>
         </Card>{" "}
         <Card
-          className="py-10 px-5 md:max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110"
+          className="py-10 px-5 md:max-w-[33%] pt-20 bg-transparent text-white rounded-3xl transition-all duration-300 transform hover:scale-110 hover:bg-white hover:text-black hover:shadow-2xl hover:shadow-purple-500"
           style={{
             boxShadow: "0 4px 10px 5px rgba(178,131,255,.5)",
           }}
@@ -47,7 +73,7 @@ const Introcards = () => {
           </CardContent>
         </Card>
       </div>
-    </section>
+    </motion.div>
   );
 };
 

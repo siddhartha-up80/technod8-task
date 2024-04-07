@@ -4,10 +4,16 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="">
+    <motion.section
+      className=""
+      initial={{ opacity: 0, y: 50 }} // Initial state (invisible and slightly moved up)
+      animate={{ opacity: 1, y: 0 }} // Final state (visible and at its original position)
+      transition={{ duration: 0.9, delay: 0.2 }} // Animation duration and delay
+    >
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-16 lg:flex-row lg:justify-between">
         <div className="flex items-center justify-center p-6 lg:mt-0 h-56 sm:h-64 lg:h-80 xl:h-96">
           <video className="w-[45vw] pt-36" autoPlay muted loop preload="auto">
@@ -55,7 +61,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
